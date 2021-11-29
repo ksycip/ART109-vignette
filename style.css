@@ -1,7 +1,102 @@
 html, body {
   margin: 0;
   padding: 0;
+font-family: 'Chicle', cursive;
+font-family: 'Codystar', cursive;
+font-family: 'Comforter Brush', cursive;
+font-family: 'Roboto Mono', monospace;
+
+background: url(assets/notes_background.png) no-repeat center center fixed;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+
+
 }
 canvas {
   display: block;
+}
+
+/* test */
+/* Add a black background color to the top navigation */
+.topnav {
+  background-color: grey;
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: red;
+  color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: cream;
+  color: white;
+}
+
+/* test end */
+
+.music{
+  position: absolute;
+  bottom: 0;
+  left: 2%;
+}
+
+.button1 {
+position: absolute;
+bottom: 60;
+left: 45%;
+}
+
+.button2{
+  position: absolute;
+  bottom: 0;
+  left: 45%;
+}
+
+.btn {
+  border: 1px solid white;
+  padding: 10px 30px;
+  color: pink;
+  text-decoration: none;
+  margin-right: 5px;
+  font-size: 20px;
+  text-transform: uppercase;
+  float: left;
+  margin-bottom: 25px;
+}
+
+.btn-one {
+  padding: 12px 28px;
+  ffont-family: 'Chicle', cursive;
+}
+
+.btn-one:hover {
+  color: pink;
+  background-color: white;
+  transition: all 0.5s ease-in;
+}
+
+.btn-two {
+  padding: 12px 28px;
+  font-family: 'Chicle', cursive;
+}
+
+.btn-two:hover {
+  color: pink;
+  background-color: white;
+  transition: all 0.5s ease-in;
 }
