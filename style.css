@@ -200,6 +200,8 @@ left: 45%;
 }
 
 /* TEST ANIMATION */
+/* credit: https://stackoverflow.com/questions/39646076/how-to-animate-a-text-cutout-over-a-background-image */
+
 * {
     box-sizing: border-box;
   }
