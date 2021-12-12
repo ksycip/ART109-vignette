@@ -8,10 +8,14 @@ font-family: 'Roboto Mono', monospace;
 
 /* background imgs */
 /* background: url(assets/notes_background.png) no-repeat center center fixed; */
--webkit-background-size: cover;
+/* -webkit-background-size: cover;
 -moz-background-size: cover;
 -o-background-size: cover;
-background-size: cover;
+background-size: cover; */
+}
+
+canvas {
+  display: block;
 }
 
 .about{
@@ -24,23 +28,86 @@ background-size: cover;
 h1{
   text-align: center;
   font-size: bolder;
+
 }
 
+h2{
+  text-align: center;
+  font-size: bolder;
+  font-weight: bold;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+h3{
+  text-align: center;
+  font-size: bolder;
+  font-weight: bold;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+
 .home-bg{
-  background: url(assets/notes_background.png) no-repeat center center fixed;
+  /* background img: Photo by <a href="https://unsplash.com/@jjying?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">JJ Ying</a> on <a href="https://unsplash.com/s/photos/paper?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+   */
+  background: url(assets/paper-background.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 .color-bg{
-  background: url(assets/) no-repeat center center fixed;
+  /* coloring pages img: https://www.vangoghmuseum.nl/en/art-and-stories/children/van-gogh-colouring-pages */
+  background: url(assets/vangogh-img1.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.color2-bg{
+  /* coloring pages img: https://www.vangoghmuseum.nl/en/art-and-stories/children/van-gogh-colouring-pages */
+  background: url(assets/vangogh-img2.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.color3-bg{
+  /* coloring pages img: https://www.vangoghmuseum.nl/en/art-and-stories/children/van-gogh-colouring-pages */
+  background: url(assets/vangogh-img3.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 .notebook-bg{
-  background: url(assets/line-paper-img.jpg) no-repeat center center fixed;
+  /* notes background: Photo by <a href="https://unsplash.com/@brandi1?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Brandi Redd</a> on <a href="https://unsplash.com/s/photos/post-it-note?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+   */
+  background: url(assets/note-white.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 .sketchpad-bg{
-  background: url(assets/) no-repeat center center fixed;
+  /* sketchpad img: https://unsplash.com/photos/D6AlacFwS_Q */
+  background: url(assets/black-sketch.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
+
+
+
+
+
 
 /* canvas {
   display: block;
@@ -68,7 +135,7 @@ h1{
 
 /* Change the color of links on hover */
 .topnav a:hover {
-  background-color: red;
+  background-color: silver;
   color: black;
 }
 
@@ -87,20 +154,21 @@ h1{
 
 .button1 {
 position: absolute;
-bottom: 60;
+/* bottom: 60; */
+top: 40;
 left: 45%;
 }
 
 .button2{
   position: absolute;
-  bottom: 0;
+  /* bottom: 0; */
   left: 45%;
 }
 
 .btn {
   border: 1px solid white;
   padding: 10px 30px;
-  color: pink;
+  color: black;
   text-decoration: none;
   margin-right: 5px;
   font-size: 20px;
@@ -111,24 +179,77 @@ left: 45%;
 
 .btn-one {
   padding: 12px 28px;
-  ffont-family: 'Chicle', cursive;
+  ffont-family: 'Roboto Mono', cursive;
 }
 
 .btn-one:hover {
-  color: pink;
+  color: black;
   background-color: white;
   transition: all 0.5s ease-in;
 }
 
 .btn-two {
   padding: 12px 28px;
-  font-family: 'Chicle', cursive;
+  font-family: 'Roboto Mono', cursive;
 }
 
 .btn-two:hover {
-  color: pink;
+  color: black;
   background-color: white;
   transition: all 0.5s ease-in;
 }
 
 /* TEST ANIMATION */
+* {
+    box-sizing: border-box;
+  }
+
+  html, body {
+    height: 100%;
+  }
+
+  #container {
+    height: 160px;
+    overflow: hidden;
+    position: absolute;
+    width: 600px;
+  }
+
+  #image {
+    animation: scale 3000ms linear infinite;
+    background: url(assets/black-bold.jpeg);
+    bottom: 0;
+    font: 96px "Roboto Mono";
+    font-weight: bold;
+    left: 0;
+    line-height: 160px;
+    overflow: hidden;
+    /* position: absolute; */
+    position: fixed;
+    right: 0;
+    text-align: center;
+    top: 50;
+    text-transform: uppercase;
+    white-space: nowrap;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+  }
+
+  @keyframes scale {
+    0% {
+      font-size: 66px;
+      text-indent: 0;
+    }
+    16% {
+      font-size: 132px;
+      text-indent: 0;
+    }
+    80% {
+      font-size: 330px;
+      text-indent: -500px;
+    }
+    100% {
+      font-size: 10000px;
+      text-indent: -25300px;
+    }
+  }
