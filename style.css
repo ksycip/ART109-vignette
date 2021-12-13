@@ -19,7 +19,7 @@ canvas {
 }
 
 .about{
-  padding-top: 250px;
+  padding-top: 70px;
   padding-right: 70px;
   padding-bottom: 50px;
   padding-left: 80px;
@@ -27,9 +27,26 @@ canvas {
   font-weight: bolder;
 }
 
+.title{
+  padding-top: 170px;
+  padding-right: 170px;
+  padding-bottom: 50px;
+  padding-left: 80px;
+  color: white;
+}
+
+.title-about{
+  padding-top: 180px;
+  padding-right: 70px;
+  padding-bottom: 50px;
+  padding-left: 80px;
+  color: white;
+}
+
 h1{
   text-align: center;
-font-weight: bolder;
+  font-weight: bolder;
+
 
 }
 
@@ -102,14 +119,15 @@ h3{
   background-size: cover;
 }
 
+.about-bg{
+  /* img credit: */
+  background: url(assets/black-bold.jpeg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
 
-
-
-
-
-/* canvas {
-  display: block;
-} */
 
 /* test */
 /* Add a black background color to the top navigation */
@@ -215,9 +233,9 @@ left: 45%;
 }
 
 /* TEST ANIMATION */
-/* credit: https://stackoverflow.com/questions/39646076/how-to-animate-a-text-cutout-over-a-background-image */
-
-* {
+/* code credit: https://stackoverflow.com/questions/39646076/how-to-animate-a-text-cutout-over-a-background-image */
+/* text background img credit: Photo by https://unsplash.com/@danesduet?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Daniel Olah</a> on <a href="https://unsplash.com/s/photos/paint-rainbow?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText*/
+/* * {
     box-sizing: border-box;
   }
 
@@ -227,50 +245,87 @@ left: 45%;
 
   #container {
     /* height: 160px; */
-    height: 300px;
+    /* height: 300px;
     overflow: hidden;
-    position: absolute;
+    position: absolute; */
     /* width: 600px; */
-    width: 1920px;
-    top: 10px;
+    /* width: 1920px;
+    top: 200px; */
     /* left: 50px; */
   }
 
-  #image {
+  /* #image {
     animation: scale 3000ms linear infinite;
-    background: url(assets/black-bold.jpeg);
+    background: url(assets/color-splash.jpg);
     bottom: 0;
     font: 96px "Roboto Mono";
     font-weight: bold;
-    left: 0;
-    line-height: 160px;
+    left: 0; */
+    /* line-height: 160px; */
+    /* line-height: 300px;
     overflow: hidden;
-    position: absolute;
+    position: absolute; */
     /* position: fixed; */
-    right: 0;
+    /* right: 0;
     text-align: center;
     top: 50;
-    text-transform: uppercase;
-    white-space: nowrap;
+    text-transform: uppercase; */
+    /* white-space: nowrap; */
+    /* white-space: normal;
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
-  }
+  } */
 
-  @keyframes scale {
-    0% {
-      font-size: 66px;
+  /* @keyframes scale {
+    0% { */
+      /* font-size: 66px; */
+      /* font-size: 50px;
       text-indent: 0;
     }
-    16% {
-      font-size: 132px;
+    16% { */
+      /* font-size: 132px; */
+      /* font-size: 100px;
       text-indent: 0;
     }
-    80% {
-      font-size: 330px;
+    80% { */
+      /* font-size: 330px; */
+      /* font-size: 250px;
       text-indent: -500px;
-    }
-    100% {
+    } */
+    /* 100% {
       font-size: 10000px;
       text-indent: -25300px;
+    } */
+  /* } */
+
+  .patterns {
+    height: 100vh;
+  }
+
+  svg text {
+    font-family: Roboto Mono;
+    letter-spacing: 10px;
+    stroke: #ffa5d8;
+    font-size: 150px;
+    font-weight: 700;
+    stroke-width: 3;
+
+    animation: textAnimate 5s infinite alternate;
+
+  }
+
+  @keyframes textAnimate {
+    0% {
+      stroke-dasharray: 0 50%;
+      stroke-dashoffset:  20%;
+      fill:hsl(189, 68%, 75%)
+
     }
+
+    100% {
+      stroke-dasharray: 50% 0;
+      stroke-dashoffstet: -20%;
+      fill: hsla(189, 68%, 75%,0%)
+    }
+
   }
