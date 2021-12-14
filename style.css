@@ -18,14 +18,7 @@ canvas {
   display: block;
 }
 
-.about{
-  padding-top: 70px;
-  padding-right: 70px;
-  padding-bottom: 50px;
-  padding-left: 80px;
 
-  font-weight: bolder;
-}
 
 .title{
   padding-top: 170px;
@@ -62,27 +55,24 @@ h3{
 
 }
 
+/* background css code credit: https://www.magicpattern.design/tools/css-backgrounds */
+
+.dots-bg{
+  background-color: #ffffff;
+opacity: 0.8;
+background-image:  radial-gradient(#000000 2px, transparent 2px), radial-gradient(#000000 2px, #ffffff 2px);
+background-size: 80px 80px;
+background-position: 0 0,40px 40px;
+}
 
 .home-bg{
-  /* background img: Photo by <a href="https://unsplash.com/@jjying?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">JJ Ying</a> on <a href="https://unsplash.com/s/photos/paper?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-   */
-  background: url(assets/paper-background.jpg) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+background-color: #e5e5f7;
+opacity: 0.8;
+background-image:  linear-gradient(black 1px, transparent 1px), linear-gradient(to right, black 1px, #e5e5f7 1px);
+background-size: 20px 20px;
 }
 
 .color-bg{
-  /* coloring pages img: https://www.vangoghmuseum.nl/en/art-and-stories/children/van-gogh-colouring-pages */
-  background: url(assets/vangogh-img1.jpg) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-
-.color2-bg{
   /* coloring pages img: https://www.vangoghmuseum.nl/en/art-and-stories/children/van-gogh-colouring-pages */
   background: url(assets/vangogh-img2.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
@@ -91,9 +81,18 @@ h3{
   background-size: cover;
 }
 
+.color2-bg{
+  /* coloring pages img: https://www.vangoghmuseum.nl/en/art-and-stories/children/van-gogh-colouring-pages */
+  background: url(assets/vangogh-img4.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
 .color3-bg{
   /* coloring pages img: https://www.vangoghmuseum.nl/en/art-and-stories/children/van-gogh-colouring-pages */
-  background: url(assets/vangogh-img3.jpg) no-repeat center center fixed;
+  background: url(assets/vangogh-img5.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -101,32 +100,19 @@ h3{
 }
 
 .notebook-bg{
-  /* notes background: Photo by <a href="https://unsplash.com/@brandi1?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Brandi Redd</a> on <a href="https://unsplash.com/s/photos/post-it-note?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-   */
-  background: url(assets/note-white.jpg) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+background-color: #FAF7F6;
+opacity: 0.8;
+background-size: 40px 40px;
+background-image:  repeating-linear-gradient(0deg, black, black 1px, #FAF7F6 1px, #FAF7F6);
 }
 
 .sketchpad-bg{
-  /* sketchpad img: https://unsplash.com/photos/D6AlacFwS_Q */
-  background: url(assets/black-sketch.jpg) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  background-color: #ffffff;
+  opacity: 0.8;
+  background-image: radial-gradient(#000000 0.5px, #ffffff 0.5px);
+  background-size: 10px 10px;
 }
 
-.about-bg{
-  /* img credit: */
-  background: url(assets/black-bold.jpeg) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
 
 
 /* test */
@@ -232,83 +218,54 @@ left: 45%;
   transition: all 0.5s ease-in;
 }
 
-/* TEST ANIMATION */
-/* code credit: https://stackoverflow.com/questions/39646076/how-to-animate-a-text-cutout-over-a-background-image */
-/* text background img credit: Photo by https://unsplash.com/@danesduet?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Daniel Olah</a> on <a href="https://unsplash.com/s/photos/paint-rainbow?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText*/
-/* * {
-    box-sizing: border-box;
+/* TEXT WRITING TEST ANIMATION */
+.wrapper {
+  height: 100vh;
+  /*This part is important for centering*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.typing-demo {
+  width: 22ch;
+  animation: typing 2s steps(22), blink .5s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
+  font-family: monospace;
+  font-size: 2em;
+}
+
+@keyframes typing {
+  from {
+    width: 0
   }
+}
 
-  html, body {
-    height: 100%;
+@keyframes blink {
+  50% {
+    border-color: transparent
   }
+}
 
-  #container {
-    /* height: 160px; */
-    /* height: 300px;
-    overflow: hidden;
-    position: absolute; */
-    /* width: 600px; */
-    /* width: 1920px;
-    top: 200px; */
-    /* left: 50px; */
-  }
 
-  /* #image {
-    animation: scale 3000ms linear infinite;
-    background: url(assets/color-splash.jpg);
-    bottom: 0;
-    font: 96px "Roboto Mono";
-    font-weight: bold;
-    left: 0; */
-    /* line-height: 160px; */
-    /* line-height: 300px;
-    overflow: hidden;
-    position: absolute; */
-    /* position: fixed; */
-    /* right: 0;
-    text-align: center;
-    top: 50;
-    text-transform: uppercase; */
-    /* white-space: nowrap; */
-    /* white-space: normal;
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
-  } */
-
-  /* @keyframes scale {
-    0% { */
-      /* font-size: 66px; */
-      /* font-size: 50px;
-      text-indent: 0;
-    }
-    16% { */
-      /* font-size: 132px; */
-      /* font-size: 100px;
-      text-indent: 0;
-    }
-    80% { */
-      /* font-size: 330px; */
-      /* font-size: 250px;
-      text-indent: -500px;
-    } */
-    /* 100% {
-      font-size: 10000px;
-      text-indent: -25300px;
-    } */
-  /* } */
+/* SVG TEST ANIMATION */
+/* CODE CREDIT: https://codepen.io/ANAMAFLA/pen/eYJbGpd */
 
   .patterns {
     height: 100vh;
   }
 
   svg text {
+
     font-family: Roboto Mono;
     letter-spacing: 10px;
-    stroke: #ffa5d8;
-    font-size: 150px;
+    stroke: black;
+    font-size: 190px;
     font-weight: 700;
     stroke-width: 3;
+
 
     animation: textAnimate 5s infinite alternate;
 
@@ -318,8 +275,8 @@ left: 45%;
     0% {
       stroke-dasharray: 0 50%;
       stroke-dashoffset:  20%;
-      fill:hsl(189, 68%, 75%)
-
+      /* fill:hsl(189, 68%, 75%) */
+      fill:hsl(#BCBCB8, 68%, 75%)
     }
 
     100% {
